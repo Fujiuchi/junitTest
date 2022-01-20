@@ -121,7 +121,7 @@ class JudgeUtilsTest {
 	// ********************************
 
 	// ケースNo1
-	// ケース内容：18歳(04/01)でプレイ可能
+	// ケース内容：18歳(04/01)でプレイ可能->17歳に変更
 	// 誕生時刻(引数)：2000/04/01
 	// 現在時刻：2018/04/01
 	// 合格条件：true
@@ -131,7 +131,7 @@ class JudgeUtilsTest {
 		// 事前処理(Mock)
 		Calendar cal = Calendar.getInstance();
 		cal.clear();
-		cal.set(Calendar.YEAR, 2018);
+		cal.set(Calendar.YEAR, 2017);
 		cal.set(Calendar.MONTH, Calendar.APRIL);
 		cal.set(Calendar.DAY_OF_MONTH, 01);
 		Date date = cal.getTime();
@@ -164,7 +164,7 @@ class JudgeUtilsTest {
 		// 事前処理(Mock)
 		Calendar cal = Calendar.getInstance();
 		cal.clear();
-		cal.set(Calendar.YEAR, 2018);
+		cal.set(Calendar.YEAR, 2017);
 		cal.set(Calendar.MONTH, Calendar.APRIL);
 		cal.set(Calendar.DAY_OF_MONTH, 02);
 		Date date = cal.getTime();
@@ -196,7 +196,7 @@ class JudgeUtilsTest {
 		// 事前処理(Mock)
 				Calendar cal = Calendar.getInstance();
 				cal.clear();
-				cal.set(Calendar.YEAR, 2017);
+				cal.set(Calendar.YEAR, 2016);
 				cal.set(Calendar.MONTH, Calendar.APRIL);
 				cal.set(Calendar.DAY_OF_MONTH, 02);
 				Date date = cal.getTime();
