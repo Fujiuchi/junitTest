@@ -6,7 +6,8 @@ import java.util.Date;
 public class JudgeUtils extends MiraiPrjApplication {
 
 	// 定数
-	public static final int AGE = 17;
+	public static final int AGE = 18;//課金年齢
+	public static final int PaAGE = 17;//プレイ年齢
 
 	/**
 	 * 課金対象か判定するメソッド<br>
@@ -58,7 +59,9 @@ public class JudgeUtils extends MiraiPrjApplication {
 		// 現在の年月日のみをセット
 		compareCal.set(curYear, curMonth, curDate);
 		// 年からプレイ可能年齢を引く
-		compareCal.add(Calendar.YEAR, -AGE);
+		//compareCal.add(Calendar.YEAR, -AGE);
+		compareCal.add(Calendar.YEAR, -PaAGE);
+
 
 		// 生年月日を設定
 		Calendar birthCal = Calendar.getInstance();
